@@ -4,11 +4,13 @@ import { useState } from 'react'
 // import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './fragments/InformacionCalamaFragment'
-import InformacionCalamaFragment from "./fragments/InformacionCalamaFragment.jsx";
+import InformacionCalamaFragment from "./fragments/InformacionCalamaFragment";
+import ColorFavoritoFragment from "./fragments/ColorFavoritoFragment";
 
 function App() {
     const [platoFavorito, setPlatoFavorito] = useState("Lasaña") // estado
 //  const [count, setCount] = useState(0)
+    const [color,setColor] = useState('Perú')
     const handleClick = () => { //funciones flecha
         // platoFavorito = 'Cazuela'
         //se hacen de esta forma
@@ -27,6 +29,7 @@ function App() {
         </button>
         <hr className={"mb-4"}/>
         <InformacionCalamaFragment />
+        <ColorFavoritoFragment color={color} datos={"123"} />
     </>
   )
 }
